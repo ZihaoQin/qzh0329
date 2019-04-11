@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Intro to MapView - Create a 2D map - 4.10</title>
+    <style>
+        html,
+        body,
+        #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" href="assects/js/arcgis_js_v411_api/arcgis_js_api/library/4.11/esri/css/main.css">
+    <script src="assects/js/arcgis_js_v411_api/arcgis_js_api/library/4.11/init.js"></script>
+
+    <script>
+        require([
+            "esri/WebScene",
+            "esri/views/SceneView"
+        ], function(WebScene, SceneView) {
+
+            var map = new WebScene({
+                portalItem:{
+                    id:"3ed9e1f71ae641f9a3677d66daa78737"
+                }
+            });
+
+            var view = new SceneView({
+                container: "viewDiv",
+                map: map
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="viewDiv"></div>
+</body>
+</html>
